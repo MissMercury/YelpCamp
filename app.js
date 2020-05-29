@@ -17,14 +17,15 @@ var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb+srv://admin-hanne:<Murphy1988>@clusteryelp-0grbu.mongodb.net/test?retryWrites=true&w=majority", {
-     useNewUrlParser: true, 
-     useUnifiedTopology: true
-    }).then(() => {
-        console.log("Connected to DB");
-    }).catch(err => {
-        console.log("ERROR:", err.message);
-    })
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true})
+// mongoose.connect("mongodb+srv://admin-hanne:Murphy1988@clusteryelp-0grbu.mongodb.net/test?retryWrites=true&w=majority", {
+//      useNewUrlParser: true, 
+//      useUnifiedTopology: true
+//     }).then(() => {
+//         console.log("Connected to DB");
+//     }).catch(err => {
+//         console.log("ERROR:", err.message);
+//     })
 
 app.use(bodyParser.urlencoded(
     { extended: true }
