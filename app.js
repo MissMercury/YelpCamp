@@ -17,7 +17,7 @@ var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb+srv://admin-hanne:Murphy1988app.js@clusteryelp-0grbu.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://admin-hanne:<Murphy1988>app.js@clusteryelp-0grbu.mongodb.net/test?retryWrites=true&w=majority", {
      useNewUrlParser: true, 
      useUnifiedTopology: true
     }).then(() => {
