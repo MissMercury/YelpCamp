@@ -1,0 +1,18 @@
+body {
+    background-color: whitesmoke;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card {
+    padding: 0;
+}
+
+#delete-form {
+    display: inline;
+}
+.delete-form {
+    display: inline;
+}
