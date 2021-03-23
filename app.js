@@ -17,6 +17,8 @@ var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
+
+// connect to MongoDB DATABASEURL is config var needed in Heroku settings
 var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp"
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true})
 
