@@ -2,23 +2,23 @@ var mongoose = require("mongoose");
 
 // Schema setup
 var campgroundSchema = new mongoose.Schema({
-    name: String,
-    price: String,
-    image: String,
-    description: String,
-    author: {
-       id: {
+   name: String,
+   price: String,
+   image: String,
+   description: String,
+   author: {
+      id: {
          type: mongoose.Schema.Types.ObjectId,
          ref: "User"
-       },
-       username:String
-    },
-    comments: [
-        {
-           type: mongoose.Schema.Types.ObjectId,
-           ref: "Comment"
-        }
-     ]
+      },
+      username:String
+   },
+   comments: [
+      {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "Comment"
+      }
+   ]
 });
 // PRE HOOK MODEL, DELETED CAMPGROUND WILL ALSO DELETE THEIR COMMENT
 const Comment = require('./comment');
